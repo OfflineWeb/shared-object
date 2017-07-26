@@ -27,8 +27,8 @@ package offlineweb.common.sharedobject.po;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import offlineweb.common.sharedobject.po.DocumentSource;
-import offlineweb.common.sharedobject.po.DocumentState;
+import offlineweb.common.sharedobject.enums.DocumentSource;
+import offlineweb.common.sharedobject.enums.DocumentState;
 
 import java.io.Serializable;
 import java.util.Date;
