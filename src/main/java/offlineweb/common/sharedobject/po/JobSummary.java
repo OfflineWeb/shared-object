@@ -38,7 +38,7 @@ import java.util.List;
  * @author papa
  *         created on 7/13/17.
  */
-public class JobSummary implements Serializable {
+public class JobSummary extends CouchPO {
 
     @JsonProperty("job")
     private String jobId;            /* job id associated with the job  */

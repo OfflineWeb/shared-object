@@ -38,7 +38,7 @@ import offlineweb.common.sharedobject.enums.JobType;
  */
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class JobConfig {
+public class JobConfig extends CouchPO {
 
     @JsonProperty(value = "name", required = true)
     private String name;            /* name of the job, assigned by user, required */

@@ -41,7 +41,7 @@ import java.util.Date;
  */
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Document implements Serializable {
+public class Document extends CouchPO {
 
     @JsonProperty(value = "cntid", required = true)
     private String contentId;       /* id of document found at source */
