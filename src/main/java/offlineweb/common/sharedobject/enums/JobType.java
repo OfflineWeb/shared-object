@@ -34,6 +34,7 @@ import java.io.Serializable;
  *         created on 7/13/17.
  */
 public enum JobType implements Serializable {
+    META,       /* refresh metadata of documents */
     ALL,        /* all, new and old contents from a source */
     REFRESH,    /* new content from a source */
     ERROR       /* only contents that threw an error */
