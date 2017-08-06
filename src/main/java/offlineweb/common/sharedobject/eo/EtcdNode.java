@@ -28,24 +28,78 @@ package offlineweb.common.sharedobject.eo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
-import offlineweb.common.sharedobject.po.Document;
 
 /**
  * @author papa
- * created on 8/3/17.
+ * created on 8/4/17.
  */
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonRootName(value = "dtask")
-public class DocumentTask extends Task {
+public class EtcdNode {
 
-    @JsonProperty("document")
-    private Document document;
+    @JsonProperty
+    private String key;
 
-    public Document getDocument() {
-        return document;
+    @JsonProperty
+    private boolean dir;
+
+    @JsonProperty
+    private long modifiedIndex;
+
+    @JsonProperty
+    private long createdIndex;
+
+    @JsonProperty
+    private String expiration;
+
+    @JsonProperty
+    private int ttl;
+
+    public String getKey() {
+        return key;
     }
 
-    public void setDocument(Document document) {
-        this.document = document;
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public boolean isDir() {
+        return dir;
+    }
+
+    public void setDir(boolean dir) {
+        this.dir = dir;
+    }
+
+    public long getModifiedIndex() {
+        return modifiedIndex;
+    }
+
+    public void setModifiedIndex(long modifiedIndex) {
+        this.modifiedIndex = modifiedIndex;
+    }
+
+    public long getCreatedIndex() {
+        return createdIndex;
+    }
+
+    public void setCreatedIndex(long createdIndex) {
+        this.createdIndex = createdIndex;
+    }
+
+    public String getExpiration() {
+        return expiration;
+    }
+
+    public void setExpiration(String expiration) {
+        this.expiration = expiration;
+    }
+
+    public int getTtl() {
+        return ttl;
+    }
+
+    public void setTtl(int ttl) {
+        this.ttl = ttl;
     }
 }

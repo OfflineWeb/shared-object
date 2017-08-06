@@ -28,7 +28,6 @@ package offlineweb.common.sharedobject.eo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
-import java.util.Date;
 import java.util.Map;
 
 /**
@@ -36,65 +35,10 @@ import java.util.Map;
  * created on 8/3/17.
  */
 @JsonRootName(value = "mtask")
-public class MetaTask {
-
-    @JsonProperty("task")
-    private String taskId;
-
-    @JsonProperty("job")
-    private String jobId;
-
-    @JsonProperty("ctime")
-    private Date createTime;
-
-    @JsonProperty("stime")
-    private Date startTime;
-
-    @JsonProperty("utime")
-    private Date updateTime;
+public class MetaTask extends Task{
 
     @JsonProperty("details")
     private Map<String, Object> taskDetails;
-
-    public String getTaskId() {
-        return taskId;
-    }
-
-    public void setTaskId(String taskId) {
-        this.taskId = taskId;
-    }
-
-    public String getJobId() {
-        return jobId;
-    }
-
-    public void setJobId(String jobId) {
-        this.jobId = jobId;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 
     public Map<String, Object> getTaskDetails() {
         return taskDetails;

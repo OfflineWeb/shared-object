@@ -27,25 +27,68 @@ package offlineweb.common.sharedobject.eo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
-import offlineweb.common.sharedobject.po.Document;
+
+import java.util.Date;
 
 /**
  * @author papa
- * created on 8/3/17.
+ * created on 8/5/17.
  */
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonRootName(value = "dtask")
-public class DocumentTask extends Task {
+public abstract class Task {
+    @JsonProperty("task")
+    private String taskId;
 
-    @JsonProperty("document")
-    private Document document;
+    @JsonProperty("job")
+    private String jobId;
 
-    public Document getDocument() {
-        return document;
+    @JsonProperty("ctime")
+    private Date createTime;
+
+    @JsonProperty("stime")
+    private Date startTime;
+
+    @JsonProperty("utime")
+    private Date updateTime;
+
+    public String getTaskId() {
+        return taskId;
     }
 
-    public void setDocument(Document document) {
-        this.document = document;
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
+
+    public String getJobId() {
+        return jobId;
+    }
+
+    public void setJobId(String jobId) {
+        this.jobId = jobId;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }
